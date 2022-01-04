@@ -1,0 +1,74 @@
+/*@media Queries*/
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+  body {
+    font-family: "Shrikhand", "Roboto" sans-serif;
+    margin: 0px;
+    border: solid 1px black;
+  }
+  h1 {
+    color: red;
+  }
+  /* logo booki*/
+  .logo {
+    background-image: url(../images/logo/ohmyfood.png);
+    padding-top: 100px;
+    font-family: 'Shrikhand';
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 300px;
+    margin: auto;
+    margin-top: 30px;
+  }
+  .flexCenter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    background-color: grey;
+  }
+  
+  .bande-annonce {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .titre-principal {
+    text-align: center;
+  }
+  h1 ~ p {
+    text-align: center;
+    font-size: x-large;
+  }
+  .restaurants .images {
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px 10px 0 0;
+    height: 130px;
+    margin: 4px;
+  }
+  .footer-propos {
+    background-color: black;
+    color: white;
+  }
+}
+/*# sourceMappingURL=main.css.map */

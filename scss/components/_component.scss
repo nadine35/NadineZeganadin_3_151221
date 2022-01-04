@@ -1,0 +1,42 @@
+input {
+
+  font-family: 'Roboto';
+  background-color: #EAEAEA;
+  border: none;
+}
+
+
+
+
+
+.buttonSearchFonction {
+
+  height: 80px;
+  width: 350px;
+
+  justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  margin-bottom: 30px;
+  border-radius: 25px;
+  color: black;
+  border-radius: 1.25rem;
+  background-color: #F6F6F6;
+  background: linear-gradient(180deg, #F6F6F6 35%, );
+  box-shadow: 2px 3px 8px #5f5858;
+  counter-reset: section;
+
+
+}
+
+.buttonFonction__item {
+
+  display: flex;
+  justify-content: space-between;
+
+}
+.iconFonction{
+
+  margin-right: 20px;
+}

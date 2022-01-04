@@ -1,0 +1,16 @@
+.buttonCommande {
+    border-radius: 25px;
+    text-transform: uppercase;
+    color: #ffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 150px;
+    background-color: yellow;
+    transition-duration: .25s;
+    cursor: pointer;
+    background: linear-gradient(180deg, rgba(255, 121, 218, 0.919502835313813) 35%, #9356DC 100%);
+  
+  
+  }

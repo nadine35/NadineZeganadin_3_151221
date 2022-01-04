@@ -1,0 +1,28 @@
+
+  .Coeur-icon {
+    color: none;
+    &:hover{
+      color: $color-secondary;
+
+
+      font-weight: bold;
+    }
+    &::before{
+
+      transition: color 1s ease-out;
+    }
+  }
+
+  .delay-0 {
+    animation-delay: 0s;
+  }
+  .delay-1 {
+    animation-delay: .1s;
+  }
+
+  .delay-2 {
+    animation-delay: .2s;
+  }
+
+  
+  

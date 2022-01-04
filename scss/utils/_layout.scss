@@ -1,0 +1,321 @@
+
+.test{
+  color: red;
+  .test2{
+    color: green;
+  }
+  &.test3{
+    color: yellow;
+  }
+}
+
+
+
+
+
+*{
+  box-sizing: border-box;
+}
+/* logo ohmyfood*/
+.logo {
+  background-image: url(../images/logo/ohmyfood.png);
+  padding-top: 70px;
+  font-family: $font-cursive;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 250px;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.text {
+  font-weight: bold;
+}
+
+.bande-annonce {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F6F6F6;
+  padding-top: 20px;
+  padding: 2rem;
+}
+
+.resultats-restaurants {
+
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.menu {
+  margin-top: -4rem;
+  border-radius: 2rem 2rem 0 0;
+  background-color: #f6f6f6;
+  z-index: 1;
+  position: relative;
+}
+
+
+.menu {
+  padding: 15px;
+}
+.menu__title {
+  font-family: $font-cursive;
+}
+.sousMenus{
+
+  padding-bottom: 5px;
+}
+
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  align-items: center;
+}
+
+.wrap-commande {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.menuItem {
+  background-color: #fff;
+  padding: 1rem;
+  display: flex;
+  border-radius: .75rem;
+  margin: 1rem 0;
+  box-shadow: .25rem .25rem 1rem rgba(0, 0, 0, .1);
+  overflow: hidden;
+  cursor: pointer;
+  animation: itemAppear .6s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-fill-mode: none;
+  animation-timing-function: cubic-bezier(.5, 1.58, .34, .82);
+  animation-fill-mode: both;
+  transform: scale(0);
+  max-width: 100%;
+
+
+  &__header {
+    flex: 1;
+
+  }
+
+  &__title {
+    margin: 0;
+  }
+
+  &__description {
+    margin: 0;
+
+  }
+
+  &__px {
+
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-left: 0.5rem;
+  }
+
+  &__ok {
+    background-color: #99e2d0;
+    margin: -1rem -5rem -1rem 1rem;
+    width: 5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: .5s;
+  }
+
+  &:hover &__ok {
+
+    margin-right: -1rem;
+  }
+
+  &__wrapIcon {
+
+    height: 1.6rem;
+    width: 1.6rem;
+    background-color: #ffff;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    transform: rotate(180deg);
+    transition-duration: .5s;
+    display: flex;
+    color: #99e2d0; ;
+  }
+
+  &:hover &__wrapIcon {
+    transform: rotate(0);
+  }
+
+}
+
+.choix-resto {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  border-radius: 25px;
+  color: black;
+  border-radius: 1.25rem;
+  background-color: #F6F6F6;
+  background: linear-gradient(180deg, #F6F6F6 35%, );
+  box-shadow: 2px 3px 8px #5f5858;
+  cursor: pointer;
+
+}
+
+.annonce {
+  margin: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.flexCenter {
+
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  align-items: baseline;
+  background-color: #EAEAEA;
+  box-shadow: 0 0 .5rem rgba(0, 0, 0, .25);
+  position: relative;
+
+}
+
+.resto {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconSize {
+
+  width: 50px;
+  height: 20px;
+}
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  background-color: #F6F6F6;
+  padding-top: 30px;
+
+}
+.img {
+  height: 350px;
+  background-size: cover;
+}
+
+.restaurants .images {
+
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px 10px 0 0;
+  height: 200px;
+  width: 100%;
+
+}
+
+.description-resto {
+  margin-left: 10px;
+  display: flex;
+  margin-left: 10px;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+
+.description-nom {
+  line-height: 0;
+}
+
+.fa-utensils {
+  margin-right: 10px;
+}
+.accueil {
+
+  position: absolute;
+  left: 1rem;
+  height: 2rem;
+  width: 2rem;
+  top: 7%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #000;
+}
+.card-item {
+  background-color: $color-tertiary;
+  color: #1b6150;
+  padding: .5rem;
+  border-radius: .125rem;
+  position: absolute;
+  margin-top: 1rem;
+  right: .50rem;
+}
+
+.logo-footer {
+  background-image: url(../images/logo/ohmyfood@2x.svg);
+  padding-top: 20px;
+  font-family: 'Shrikhand';
+  line-height: 1.5;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 150px;
+  margin-left: 20px;
+  margin-top: 30px;
+  filter: invert(100%);
+}
+
+.liste-footer {
+  width: 150%;
+  padding-left: 0;
+}
+.footer-icon {
+  width: 1.2rem;
+  margin-right: .5rem;
+
+}
+.footer-propos {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+}
+.liste-footer {
+
+  list-style-type: none;
+  font-family: 'Roboto';
+  color: white;
+}
+.liste-footer li::before {
+
+  counter-increment: none;
+  content: none;
+}
+.footer-propos h3 {
+  margin-left: 38px;
+}
