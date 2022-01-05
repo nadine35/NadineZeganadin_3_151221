@@ -22,7 +22,7 @@
   font-family: "Shrikhand", cursive;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 250px;
+  width: 200px;
   margin: auto;
   margin-top: 30px;
 }
@@ -54,10 +54,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   margin-bottom: 20px;
 }
 
@@ -556,6 +552,30 @@ input {
 
 /*@media Queries*/
 @media (min-width: 1200px) {
+  .loader {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    -webkit-animation: loader 0.01s;
+            animation: loader 0.01s;
+    -webkit-animation-delay: 1.75s;
+            animation-delay: 1.75s;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    z-index: 10000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .fonctionnement {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -567,9 +587,36 @@ input {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
+  .menu__title {
+    font-family: "Shrikhand", cursive;
+  }
+  .menuItem__header, .menuItem__title {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
   .restaurants {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .resultats-restaurants {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .annonce {
+    margin: 20px;
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 10px;
+    width: 40%;
   }
   li.buttonFonction {
     margin-right: 50px;
@@ -601,12 +648,6 @@ input {
   }
   .reinit {
     counter-reset: compteListe;
-  }
-  .resultats-restaurants {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-    display: -ms-grid;
-    display: grid;
   }
   .card {
     text-decoration: none;
@@ -658,7 +699,12 @@ input {
   .title-resto {
     margin-left: 10px;
   }
-  .card-item {
+  .menuItem_description {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .card.card-item {
     background-color: #99E2D0;
     color: #1b6150;
     padding: .5rem;
@@ -666,7 +712,71 @@ input {
     position: absolute;
     margin-top: 1rem;
     right: .50rem;
-    margin-right: 40px;
+    margin-right: 180px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .card {
+    text-decoration: none;
+    color: initial;
+    position: relative;
+  }
+  .resultats-restaurants {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .menuItem_description {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .annonce {
+    width: 40%;
+  }
+  .card.card-item {
+    background-color: #99E2D0;
+    color: #1b6150;
+    padding: .5rem;
+    border-radius: .125rem;
+    position: absolute;
+    margin-top: 1rem;
+  }
+  a {
+    color: black;
+    text-decoration: none;
+  }
+  li::before {
+    counter-increment: compteListe;
+    content: counter(compteListe) " ";
+    background: #9356DC;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #ffff;
+    position: absolute;
+    margin-left: -70px;
+  }
+  ol {
+    list-style-type: none;
+    counter-reset: compteListe;
+  }
+  li.buttonFonction {
+    margin-right: 50px;
+    margin-left: 30px;
   }
 }
 
@@ -679,6 +789,16 @@ input {
   h1 {
     color: black;
   }
+  .resultats-restaurants {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   a {
     color: black;
     text-decoration: none;
@@ -690,6 +810,11 @@ input {
   li.buttonFonction {
     margin-right: 50px;
     margin-left: 30px;
+  }
+  .menu__header, .menu__title {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
   ol {
     list-style-type: none;
@@ -720,6 +845,16 @@ input {
   }
   .menu__title {
     font-family: "Shrikhand", cursive;
+  }
+  .menuItem__header, .menuItem__title {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .menuItem_description {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
   .sousMenus__title {
     text-transform: uppercase;
@@ -771,8 +906,17 @@ input {
     font-weight: bold;
   }
   .menuItem__icon {
+    /*blabla*/
     color: #99e2d0;
   }
+  /* .menuItem_description {
+
+      margin: 0;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+
+    }*/
   .container {
     max-width: 1280px;
   }
@@ -908,12 +1052,6 @@ input {
             box-shadow: 2px 3px 8px #5f5858;
     cursor: pointer;
   }
-  .annonce {
-    margin: 20px;
-    margin-bottom: 20px;
-    background-color: white;
-    border-radius: 10px;
-  }
   .flexCenter {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1003,7 +1141,7 @@ input {
     font-size: 1.2rem;
     color: #000;
   }
-  .card-item {
+  .card.card-item {
     background-color: #99E2D0;
     color: #1b6150;
     padding: .5rem;

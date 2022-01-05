@@ -1,10 +1,11 @@
-
-.test{
+.test {
   color: red;
-  .test2{
+
+  .test2 {
     color: green;
   }
-  &.test3{
+
+  &.test3 {
     color: yellow;
   }
 }
@@ -13,9 +14,10 @@
 
 
 
-*{
+* {
   box-sizing: border-box;
 }
+
 /* logo ohmyfood*/
 .logo {
   background-image: url(../images/logo/ohmyfood.png);
@@ -23,7 +25,7 @@
   font-family: $font-cursive;
   background-repeat: no-repeat;
   background-size: contain;
-  width: 250px;
+  width: 200px;
   margin: auto;
   margin-top: 30px;
 }
@@ -45,7 +47,6 @@
 .resultats-restaurants {
 
   display: flex;
-  flex-direction: column;
   margin-bottom: 20px;
 }
 
@@ -61,10 +62,12 @@
 .menu {
   padding: 15px;
 }
+
 .menu__title {
   font-family: $font-cursive;
 }
-.sousMenus{
+
+.sousMenus {
 
   padding-bottom: 5px;
 }
@@ -153,7 +156,8 @@
     transform: rotate(180deg);
     transition-duration: .5s;
     display: flex;
-    color: #99e2d0; ;
+    color: #99e2d0;
+    ;
   }
 
   &:hover &__wrapIcon {
@@ -219,6 +223,7 @@
   padding-top: 30px;
 
 }
+
 .img {
   height: 350px;
   background-size: cover;
@@ -253,6 +258,7 @@
 .fa-utensils {
   margin-right: 10px;
 }
+
 .accueil {
 
   position: absolute;
@@ -267,6 +273,7 @@
   font-size: 1.2rem;
   color: #000;
 }
+
 .card-item {
   background-color: $color-tertiary;
   color: #1b6150;
@@ -294,28 +301,33 @@
   width: 150%;
   padding-left: 0;
 }
+
 .footer-icon {
   width: 1.2rem;
   margin-right: .5rem;
 
 }
+
 .footer-propos {
   display: flex;
   flex-direction: column;
   background-color: black;
   color: white;
 }
+
 .liste-footer {
 
   list-style-type: none;
   font-family: 'Roboto';
   color: white;
 }
+
 .liste-footer li::before {
 
   counter-increment: none;
   content: none;
 }
+
 .footer-propos h3 {
   margin-left: 38px;
 }
