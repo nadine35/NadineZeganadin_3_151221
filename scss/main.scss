@@ -8,6 +8,32 @@
 
 
 /*@media Queries*/
+body {
+  margin: 0px;
+  font-family: Roboto, sans-serif;
+}
+
+.restaurants .images {
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px 10px 0 0;
+  height: 12rem;
+  width: 100%;
+  position: relative;
+
+}
+
+.card.card-item {
+  background-color: $color-tertiary;
+  color: #1b6150;
+  padding: .5rem;
+  border-radius: .125rem;
+  position: absolute;
+  margin-top: 1rem;
+  right: .50rem;
+  margin-right: 20px;
+}
+
 @media (min-width:1200px) {
   .loader-container {
 
@@ -147,10 +173,7 @@
     text-decoration: none;
   }
 
-  body {
-    margin: 0px;
-    font-family: Roboto, sans-serif;
-  }
+
 
   .sousMenus__title {
     text-transform: uppercase;
@@ -334,6 +357,7 @@
     margin-left: 30px;
   }
 }
+
 body {
   margin: 0px;
   font-family: Roboto, sans-serif;
@@ -342,7 +366,7 @@ body {
 /*@media Queries*/
 @media (max-width:768px) {
 
-  
+
   h1 {
 
     color: $color;
@@ -677,14 +701,7 @@ body {
     background-size: cover;
   }
 
-  .restaurants .images {
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px 10px 0 0;
-    height: 12rem;
-    width: 100%;
 
-  }
 
   .description-resto {
     margin-left: 10px;
@@ -720,16 +737,7 @@ body {
     color: #000;
   }
 
-  .card.card-item {
-    background-color: $color-tertiary;
-    color: #1b6150;
-    padding: .5rem;
-    border-radius: .125rem;
-    position: absolute;
-    margin-top: 1rem;
-    right: .50rem;
-    margin-right: 20px;
-  }
+
 
   .logo-footer {
     background-image: url(../images/logo/ohmyfood@2x.svg);
@@ -745,7 +753,7 @@ body {
     filter: invert(100%);
   }
 
- /* .liste-footer {
+  /* .liste-footer {
     width: 150%;
     padding-left: 0;
     list-style-type: none;
@@ -776,6 +784,7 @@ body {
     font-family: 'Roboto';
     color: white;
   }
+
   li::before {
 
     counter-increment: none;

@@ -630,6 +630,31 @@ input {
 }
 
 /*@media Queries*/
+body {
+  margin: 0px;
+  font-family: Roboto, sans-serif;
+}
+
+.restaurants .images {
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px 10px 0 0;
+  height: 12rem;
+  width: 100%;
+  position: relative;
+}
+
+.card.card-item {
+  background-color: #99E2D0;
+  color: #1b6150;
+  padding: .5rem;
+  border-radius: .125rem;
+  position: absolute;
+  margin-top: 1rem;
+  right: .50rem;
+  margin-right: 20px;
+}
+
 @media (min-width: 1200px) {
   .loader-container {
     border-radius: 5px;
@@ -749,10 +774,6 @@ input {
   a {
     color: black;
     text-decoration: none;
-  }
-  body {
-    margin: 0px;
-    font-family: Roboto, sans-serif;
   }
   .sousMenus__title {
     text-transform: uppercase;
@@ -921,12 +942,13 @@ input {
   }
 }
 
+body {
+  margin: 0px;
+  font-family: Roboto, sans-serif;
+}
+
 /*@media Queries*/
 @media (max-width: 768px) {
-  body {
-    margin: 0px;
-    font-family: Roboto, sans-serif;
-  }
   h1 {
     color: black;
   }
@@ -1280,13 +1302,6 @@ input {
     height: 350px;
     background-size: cover;
   }
-  .restaurants .images {
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px 10px 0 0;
-    height: 12rem;
-    width: 100%;
-  }
   .description-resto {
     margin-left: 10px;
     display: -webkit-box;
@@ -1329,16 +1344,6 @@ input {
     font-size: 1.2rem;
     color: #000;
   }
-  .card.card-item {
-    background-color: #99E2D0;
-    color: #1b6150;
-    padding: .5rem;
-    border-radius: .125rem;
-    position: absolute;
-    margin-top: 1rem;
-    right: .50rem;
-    margin-right: 20px;
-  }
   .logo-footer {
     background-image: url(../images/logo/ohmyfood@2x.svg);
     padding-top: 20px;
@@ -1352,6 +1357,28 @@ input {
     -webkit-filter: invert(100%);
             filter: invert(100%);
   }
+  /* .liste-footer {
+    width: 150%;
+    padding-left: 0;
+    list-style-type: none;
+    font-family: 'Roboto';
+    color: white;
+  }*/
+  .footer-icon {
+    width: 1.2rem;
+    margin-right: .5rem;
+  }
+  .footer-propos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: black;
+    color: white;
+  }
   .liste-footer {
     width: 150%;
     padding-left: 0;
@@ -1359,31 +1386,12 @@ input {
     font-family: 'Roboto';
     color: white;
   }
-}
-
-.footer-icon {
-  width: 1.2rem;
-  margin-right: .5rem;
-}
-
-.footer-propos {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  background-color: black;
-  color: white;
-}
-
-.liste-footer li::before {
-  counter-increment: none;
-  content: none;
-}
-
-.footer-propos h3 {
-  margin-left: 38px;
+  li::before {
+    counter-increment: none;
+    content: none;
+  }
+  .footer-propos h3 {
+    margin-left: 38px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
