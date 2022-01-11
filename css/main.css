@@ -635,6 +635,78 @@ body {
   font-family: Roboto, sans-serif;
 }
 
+.loader-container {
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loader {
+  display: block;
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 7px solid transparent;
+  border-top-color: crimson;
+  -webkit-animation: spin 2s linear infinite;
+          animation: spin 2s linear infinite;
+}
+
+.loader::before,
+.loader::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 7px solid transparent;
+}
+
+.loader::before {
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border-top-color: #fc2d56;
+  -webkit-animation: spin 3s linear infinite;
+          animation: spin 3s linear infinite;
+  background: #99E2D0;
+}
+
+.loader::after {
+  top: 25px;
+  left: 25px;
+  right: 25px;
+  bottom: 25px;
+  border-top-color: #c06c7d;
+  -webkit-animation: spin 3s linear infinite;
+          animation: spin 3s linear infinite;
+  background: orange;
+}
+
+.card {
+  text-decoration: none;
+  color: initial;
+  position: relative;
+}
+
+.card.card-item {
+  background-color: #99E2D0;
+  color: #1b6150;
+  padding: .5rem;
+  border-radius: .125rem;
+  position: absolute;
+  margin-top: 1rem;
+  right: .50rem;
+  margin-right: 180px;
+}
+
 .restaurants .images {
   background-size: cover;
   background-position: center;
@@ -656,21 +728,6 @@ body {
 }
 
 @media (min-width: 1200px) {
-  .loader-container {
-    border-radius: 5px;
-    width: 400px;
-    height: 400px;
-    margin: 100px auto 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
   .fonctionnement {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -816,74 +873,9 @@ body {
     text-overflow: ellipsis;
     overflow: hidden;
   }
-  .card.card-item {
-    background-color: #99E2D0;
-    color: #1b6150;
-    padding: .5rem;
-    border-radius: .125rem;
-    position: absolute;
-    margin-top: 1rem;
-    right: .50rem;
-    margin-right: 180px;
-  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1200px) {
-  .loader-container {
-    border-radius: 5px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .loader {
-    display: block;
-    position: relative;
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    border: 7px solid transparent;
-    border-top-color: crimson;
-    -webkit-animation: spin 2s linear infinite;
-            animation: spin 2s linear infinite;
-  }
-  .loader::before,
-  .loader::after {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    border: 7px solid transparent;
-  }
-  .loader::before {
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    border-top-color: #fc2d56;
-    -webkit-animation: spin 3s linear infinite;
-            animation: spin 3s linear infinite;
-    background: #99E2D0;
-  }
-  .loader::after {
-    top: 25px;
-    left: 25px;
-    right: 25px;
-    bottom: 25px;
-    border-top-color: #c06c7d;
-    -webkit-animation: spin 3s linear infinite;
-            animation: spin 3s linear infinite;
-    background: orange;
-  }
-  .card {
-    text-decoration: none;
-    color: initial;
-    position: relative;
-  }
   .resultats-restaurants {
     display: -webkit-box;
     display: -ms-flexbox;
