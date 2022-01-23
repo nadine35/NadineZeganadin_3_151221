@@ -1,59 +1,60 @@
-.test {
-  color: red;
+#loader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  background-color: #000;
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+  -webkit-animation: loader 5s linear;
+          animation: loader 5s linear;
+  visibility: hidden;
 }
 
-.test .test2 {
-  color: green;
-}
-
-.test.test3 {
-  color: yellow;
-}
-
-.loader {
+#loader .loader-container .loader {
   display: block;
   position: relative;
-  width: 250px;
-  height: 250px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  border: 7px solid transparent;
-  border-top-color: crimson;
-  -webkit-animation: spin 2s linear infinite;
-          animation: spin 2s linear infinite;
+  border: 5px solid transparent;
+  border-top-color: red;
+  -webkit-animation: rotate 2s linear infinite;
+          animation: rotate 2s linear infinite;
 }
 
-.loader::before, .loader::after {
+#loader .loader-container .loader::before, #loader .loader-container .loader::after {
   content: "";
   position: absolute;
   border-radius: 50%;
-  border: 7px solid transparent;
+  border: 5px solid transparent;
 }
 
-.loader::before {
+#loader .loader-container .loader::before {
   top: 10px;
   left: 10px;
   right: 10px;
   bottom: 10px;
-  border-top-color: #fc2d56;
-  -webkit-animation: spin 3s linear infinite;
-          animation: spin 3s linear infinite;
-  background: green;
+  border-top-color: orange;
+  -webkit-animation: rotate 3s linear infinite;
+          animation: rotate 3s linear infinite;
 }
 
-.loader::after {
+#loader .loader-container .loader::after {
   top: 25px;
   left: 25px;
   right: 25px;
   bottom: 25px;
-  border-top-color: #c06c7d;
-  -webkit-animation: spin 3s linear infinite;
-          animation: spin 3s linear infinite;
-  background: orange;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  border-top-color: grey;
+  -webkit-animation: rotate 1.5s linear infinite;
+          animation: rotate 1.5s linear infinite;
 }
 
 /* logo ohmyfood*/
@@ -96,6 +97,8 @@
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .menu {
@@ -276,6 +279,7 @@
   margin-bottom: 20px;
   background-color: white;
   border-radius: 10px;
+  width: 100%;
 }
 
 .flexCenter {
@@ -486,7 +490,7 @@ input {
 
 .buttonSearchFonction {
   height: 80px;
-  width: 350px;
+  width: 300px;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -587,30 +591,52 @@ input {
 
 @-webkit-keyframes itemAppear {
   0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
   }
 }
 
 @keyframes itemAppear {
   0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
   }
 }
 
-@-webkit-keyframes spin {
+@-webkit-keyframes loader {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    visibility: visible;
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes loader {
+  0% {
+    visibility: visible;
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
   }
   100% {
     -webkit-transform: rotate(360deg);
@@ -618,10 +644,10 @@ input {
   }
 }
 
-@keyframes spin {
+@keyframes rotate {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
   }
   100% {
     -webkit-transform: rotate(360deg);
@@ -629,65 +655,13 @@ input {
   }
 }
 
-/*@media Queries*/
+.container {
+  max-width: 1200px;
+}
+
 body {
   margin: 0px;
   font-family: Roboto, sans-serif;
-}
-
-.loader-container {
-  border-radius: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.loader {
-  display: block;
-  position: relative;
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  border: 7px solid transparent;
-  border-top-color: crimson;
-  -webkit-animation: spin 2s linear infinite;
-          animation: spin 2s linear infinite;
-}
-
-.loader::before,
-.loader::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  border: 7px solid transparent;
-}
-
-.loader::before {
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  border-top-color: #fc2d56;
-  -webkit-animation: spin 3s linear infinite;
-          animation: spin 3s linear infinite;
-  background: #99E2D0;
-}
-
-.loader::after {
-  top: 25px;
-  left: 25px;
-  right: 25px;
-  bottom: 25px;
-  border-top-color: #c06c7d;
-  -webkit-animation: spin 3s linear infinite;
-          animation: spin 3s linear infinite;
-  background: orange;
 }
 
 .card {
@@ -727,6 +701,108 @@ body {
   margin-right: 20px;
 }
 
+.buttonFonction {
+  margin-right: 50px;
+  margin-left: 30px;
+}
+
+.buttonFonction::before {
+  counter-increment: compteListe;
+  content: counter(compteListe) " ";
+  background: #9356DC;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #ffff;
+  position: absolute;
+  margin-left: -70px;
+}
+
+.buttonFonction li::before {
+  counter-increment: none;
+  content: none;
+}
+
+.buttonFonction ol {
+  list-style-type: none;
+  counter-reset: compteListe;
+}
+
+.buttonFonction .reinit {
+  counter-reset: compteListe;
+}
+
+.buttonFonction li.buttonFonction {
+  margin-right: 50px;
+  margin-left: 30px;
+}
+
+.buttonFonction ol {
+  list-style-type: none;
+  counter-reset: compteListe;
+}
+
+.buttonFonction li::before {
+  counter-increment: compteListe;
+  content: counter(compteListe) " ";
+  background: #9356DC;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffff;
+  position: absolute;
+}
+
+.buttonFonction li.buttonFonction {
+  margin-right: 50px;
+  margin-left: 30px;
+}
+
+.buttonFonction .reinit {
+  counter-reset: compteListe;
+}
+
+.buttonFonction a {
+  color: black;
+  text-decoration: none;
+}
+
+.buttonFonction .menu__header {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 2rem 0 1rem;
+}
+
+.buttonFonction .title-resto {
+  margin-left: 20px;
+  font-size: x-large;
+}
+
 @media (min-width: 1200px) {
   .fonctionnement {
     -webkit-box-orient: horizontal;
@@ -741,6 +817,18 @@ body {
   }
   .menu__title {
     font-family: "Shrikhand", cursive;
+  }
+  .menu__header {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 1rem 2rem 0 1rem;
   }
   .menuItem__header,
   .menuItem__title {
@@ -771,62 +859,8 @@ body {
     border-radius: 10px;
     width: 40%;
   }
-  li.buttonFonction {
-    margin-right: 50px;
-    margin-left: 30px;
-  }
-  li.buttonFonction::before {
-    counter-increment: compteListe;
-    content: counter(compteListe) " ";
-    background: #9356DC;
-    height: 1.5rem;
-    width: 1.5rem;
-    border-radius: 100px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    color: #ffff;
-    position: absolute;
-    margin-left: -40px;
-  }
-  ol {
-    list-style-type: none;
-    counter-reset: compteListe;
-  }
-  /* li.buttonFonction::before {
-    counter-increment: compteListe;
-    content: counter(compteListe) " ";
-    background: #9356DC;
-    height: 1.5rem;
-    width: 1.5rem;
-    border-radius: 100px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    color: #ffff;
-    position: absolute;
-    margin-left: -40px;
-  }*/
-  .reinit {
-    counter-reset: compteListe;
-  }
   .card {
     text-decoration: none;
-  }
-  .description-nom {
-    line-height: 0.5em;
   }
   a {
     color: black;
@@ -834,18 +868,6 @@ body {
   }
   .sousMenus__title {
     text-transform: uppercase;
-  }
-  .menu__header {
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding: 1rem 2rem 0 1rem;
   }
   .sousMenus__title::after {
     content: "";
@@ -865,17 +887,6 @@ body {
   .menuItem__ok {
     width: 4em;
   }
-  .title-resto {
-    margin-left: 10px;
-  }
-  .menuItem_description {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1200px) {
   .resultats-restaurants {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -884,7 +895,7 @@ body {
         flex-wrap: wrap;
     margin-bottom: 20px;
   }
-  .menuItem_description {
+  .menuItem__description {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -904,46 +915,13 @@ body {
     color: black;
     text-decoration: none;
   }
-  li::before {
-    counter-increment: compteListe;
-    content: counter(compteListe) " ";
-    background: #9356DC;
-    height: 1.5rem;
-    width: 1.5rem;
-    border-radius: 100px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    color: #ffff;
-    position: absolute;
-    margin-left: -70px;
+  h1 {
+    color: black;
   }
-  ol {
-    list-style-type: none;
-    counter-reset: compteListe;
-  }
-  li.buttonFonction {
-    margin-right: 50px;
-    margin-left: 30px;
-  }
-}
-
-body {
-  margin: 0px;
-  font-family: Roboto, sans-serif;
 }
 
 /*@media Queries*/
 @media (max-width: 768px) {
-  h1 {
-    color: black;
-  }
   .resultats-restaurants {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -953,51 +931,25 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
-  a {
-    color: black;
-    text-decoration: none;
-  }
-  .title-resto {
-    margin-left: 10px;
-    font-size: x-large;
-  }
-  li.buttonFonction {
-    margin-right: 50px;
-    margin-left: 30px;
-  }
-  .menu__header,
-  .menu__title {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-  ol {
-    list-style-type: none;
-    counter-reset: compteListe;
-  }
-  li::before {
-    counter-increment: compteListe;
-    content: counter(compteListe) " ";
-    background: #9356DC;
-    height: 1.5rem;
-    width: 1.5rem;
-    border-radius: 100px;
+  .menu__header {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    color: #ffff;
-    position: absolute;
-    margin-left: -70px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 1rem 2rem 0 1rem;
   }
-  .reinit {
-    counter-reset: compteListe;
+  .menuItem__description {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
   }
   .menu__title {
     font-family: "Shrikhand", cursive;
@@ -1008,7 +960,7 @@ body {
     text-overflow: ellipsis;
     overflow: hidden;
   }
-  .menuItem_description {
+  .menuItem__description {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -1063,58 +1015,8 @@ body {
     font-weight: bold;
   }
   .menuItem__icon {
-    /*blabla*/
+    /*coloris menu__ok*/
     color: #99e2d0;
-  }
-  .loader-container {
-    border-radius: 5px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .loader {
-    display: block;
-    position: relative;
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    border: 7px solid transparent;
-    border-top-color: crimson;
-    -webkit-animation: spin 2s linear infinite;
-            animation: spin 2s linear infinite;
-  }
-  .loader::before,
-  .loader::after {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    border: 7px solid transparent;
-  }
-  .loader::before {
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    border-top-color: #fc2d56;
-    -webkit-animation: spin 3s linear infinite;
-            animation: spin 3s linear infinite;
-    background: #99E2D0;
-  }
-  .loader::after {
-    top: 25px;
-    left: 25px;
-    right: 25px;
-    bottom: 25px;
-    border-top-color: #c06c7d;
-    -webkit-animation: spin 3s linear infinite;
-            animation: spin 3s linear infinite;
-    background: orange;
   }
   .container {
     max-width: 1280px;
@@ -1122,22 +1024,11 @@ body {
   .container__menu {
     margin-top: -60px;
   }
-  .fa-heart.fa-2x.coeur-menu {
+  /* .fa-heart.fa-2x.coeur-menu {
     color: none;
     margin-right: 25px;
-  }
-  .menu__header {
-    padding: 1rem 2rem 0 1rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
+
+  }*/
   .menuItem {
     background-color: #fff;
     padding: 1rem;
@@ -1310,9 +1201,6 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
   }
-  .description-nom {
-    line-height: 0;
-  }
   .fa-utensils {
     margin-right: 10px;
   }
@@ -1349,13 +1237,6 @@ body {
     -webkit-filter: invert(100%);
             filter: invert(100%);
   }
-  /* .liste-footer {
-    width: 150%;
-    padding-left: 0;
-    list-style-type: none;
-    font-family: 'Roboto';
-    color: white;
-  }*/
   .footer-icon {
     width: 1.2rem;
     margin-right: .5rem;
@@ -1377,10 +1258,6 @@ body {
     list-style-type: none;
     font-family: 'Roboto';
     color: white;
-  }
-  li::before {
-    counter-increment: none;
-    content: none;
   }
   .footer-propos h3 {
     margin-left: 38px;

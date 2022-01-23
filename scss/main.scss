@@ -7,61 +7,16 @@
 @import"./utils/keyframes";
 
 
-/*@media Queries*/
+
+.container{
+
+  max-width: 1200px;
+}
 body {
   margin: 0px;
   font-family: Roboto, sans-serif;
 }
-.loader-container {
 
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.loader {
-  display: block;
-  position: relative;
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  border: 7px solid transparent;
-  border-top-color: crimson;
-  animation: spin 2s linear infinite;
-
-
-}
-
-.loader::before,
-.loader::after {
-
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  border: 7px solid transparent;
-}
-
-.loader::before {
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  border-top-color: rgb(252, 45, 86);
-  animation: spin 3s linear infinite;
-  background: #99E2D0;
-}
-
-.loader::after {
-
-  top: 25px;
-  left: 25px;
-  right: 25px;
-  bottom: 25px;
-  border-top-color: rgb(192, 108, 125);
-  animation: spin 3s linear infinite;
-  background: orange;
-}
 .card {
   text-decoration: none;
   color: initial;
@@ -98,6 +53,97 @@ body {
   right: .50rem;
   margin-right: 20px;
 }
+.buttonFonction {
+
+  margin-right: 50px;
+  margin-left: 30px;
+
+  &::before {
+    counter-increment: compteListe;
+    content: counter(compteListe) " ";
+    background: #9356DC;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 100px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #ffff;
+    position: absolute;
+    margin-left: -70px;
+
+  }
+  li::before {
+
+    counter-increment: none;
+    content: none;
+  }
+ 
+  
+
+ol {
+  list-style-type: none;
+  counter-reset: compteListe;
+}
+
+
+.reinit {
+  counter-reset: compteListe;
+}
+li.buttonFonction {
+
+  margin-right: 50px;
+  margin-left: 30px;
+}
+ol {
+  list-style-type: none;
+  counter-reset: compteListe;
+}
+
+li::before {
+  counter-increment: compteListe;
+  content: counter(compteListe) " ";
+  background: $color-primary;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffff;
+  position: absolute;
+
+}
+li.buttonFonction {
+
+  margin-right: 50px;
+  margin-left: 30px;
+}
+.reinit {
+  counter-reset: compteListe;
+}
+a {
+  color: $color;
+  text-decoration: none;
+}
+.menu__header {
+  align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem 0 1rem;
+}
+.title-resto {
+  margin-left: 20px;
+  font-size: x-large;
+}
+
+}
 
 @media (min-width:1200px) {
   
@@ -110,6 +156,12 @@ body {
 
   .menu__title {
     font-family: $font-cursive;
+  }
+  .menu__header {
+    align-items: baseline;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem 0 1rem;
   }
 
   .menuItem__header,
@@ -129,91 +181,25 @@ body {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-
     margin-bottom: 20px;
-
     width: 100%;
   }
 
   .annonce {
-
     margin: 20px;
-
     background-color: white;
     border-radius: 10px;
     margin: 20px;
-
-
     background-color: white;
     border-radius: 10px;
     width: 40%;
   }
 
-  li.buttonFonction {
-
-    margin-right: 50px;
-    margin-left: 30px;
-
-    &::before {
-      counter-increment: compteListe;
-      content: counter(compteListe) " ";
-      background: #9356DC;
-      height: 1.5rem;
-      width: 1.5rem;
-      border-radius: 100px;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      color: #ffff;
-      position: absolute;
-      margin-left: -40px;
-    }
-  }
-
-  ol {
-    list-style-type: none;
-    counter-reset: compteListe;
-  }
-
-
-
-
-  /* li.buttonFonction::before {
-    counter-increment: compteListe;
-    content: counter(compteListe) " ";
-    background: #9356DC;
-    height: 1.5rem;
-    width: 1.5rem;
-    border-radius: 100px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    color: #ffff;
-    position: absolute;
-    margin-left: -40px;
-  }*/
-
-  .reinit {
-    counter-reset: compteListe;
-  }
+ 
   .card {
     text-decoration: none;
   }
-  .description-nom {
-    line-height: 0.5em;
-  }
+ 
 
   a {
     color: $color;
@@ -223,14 +209,6 @@ body {
   .sousMenus__title {
     text-transform: uppercase;
   }
-
-  .menu__header {
-    align-items: baseline;
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem 2rem 0 1rem;
-  }
-
   .sousMenus__title::after {
     content: "";
     width: 3rem;
@@ -253,35 +231,13 @@ body {
     width: 4em;
 
   }
-
-  .title-resto {
-    margin-left: 10px;
-  }
-
-  .menuItem_description {
-
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-
-  
-
-}
-
-@media screen and (min-width: 768px) and (max-width:1200px) {
-  
-
-
-  
-
   .resultats-restaurants {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 20px;
   }
 
-  .menuItem_description {
+  .menuItem__description {
 
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -295,7 +251,6 @@ body {
   .card.card-item {
     background-color: #99E2D0;
     color: #1b6150;
-
     padding: .5rem;
     border-radius: .125rem;
     position: absolute;
@@ -307,108 +262,39 @@ body {
     text-decoration: none;
   }
 
-  li::before {
-    counter-increment: compteListe;
-    content: counter(compteListe) " ";
-    background: #9356DC;
-    height: 1.5rem;
-    width: 1.5rem;
-    border-radius: 100px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    color: #ffff;
-    position: absolute;
-    margin-left: -70px;
-
-  }
-
-  ol {
-    list-style-type: none;
-    counter-reset: compteListe;
-  }
-
-  li.buttonFonction {
-
-    margin-right: 50px;
-    margin-left: 30px;
-  }
-}
-
-body {
-  margin: 0px;
-  font-family: Roboto, sans-serif;
-}
-
-/*@media Queries*/
-@media (max-width:768px) {
-
-
   h1 {
 
     color: $color;
   }
+
+}
+/*@media Queries*/
+@media (max-width:768px) {
+
+  
 
   .resultats-restaurants {
 
     display: flex;
     margin-bottom: 20px;
     flex-direction: column;
+    flex-wrap: wrap;
   }
-
-  a {
-    color: $color;
-    text-decoration: none;
+ 
+  
+  .menu__header {
+    align-items: baseline;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem 0 1rem;
   }
+  .menuItem__description {
 
-  .title-resto {
-    margin-left: 10px;
-    font-size: x-large;
-  }
-
-  li.buttonFonction {
-
-    margin-right: 50px;
-    margin-left: 30px;
-  }
-
-  .menu__header,
-  .menu__title {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
   }
-
-  ol {
-    list-style-type: none;
-    counter-reset: compteListe;
-  }
-
-  li::before {
-    counter-increment: compteListe;
-    content: counter(compteListe) " ";
-    background: $color-primary;
-    height: 1.5rem;
-    width: 1.5rem;
-    border-radius: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ffff;
-    position: absolute;
-    margin-left: -70px;
-  }
-
-  .reinit {
-    counter-reset: compteListe;
-  }
-
+   
   .menu__title {
     font-family: $font-cursive;
   }
@@ -420,7 +306,7 @@ body {
     overflow: hidden;
   }
 
-  .menuItem_description {
+  .menuItem__description {
 
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -479,61 +365,9 @@ body {
   }
 
   .menuItem__icon {
-    /*blabla*/
+    /*coloris menu__ok*/
     color: #99e2d0;
 
-  }
-
-  .loader-container {
-
-    border-radius: 5px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .loader {
-    display: block;
-    position: relative;
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    border: 7px solid transparent;
-    border-top-color: crimson;
-    animation: spin 2s linear infinite;
-
-
-  }
-
-  .loader::before,
-  .loader::after {
-
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    border: 7px solid transparent;
-  }
-
-  .loader::before {
-    top: 10px;
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-    border-top-color: rgb(252, 45, 86);
-    animation: spin 3s linear infinite;
-    background: #99E2D0;
-  }
-
-  .loader::after {
-
-    top: 25px;
-    left: 25px;
-    right: 25px;
-    bottom: 25px;
-    border-top-color: rgb(192, 108, 125);
-    animation: spin 3s linear infinite;
-    background: orange;
   }
 
 
@@ -545,20 +379,13 @@ body {
     }
   }
 
-  .fa-heart.fa-2x.coeur-menu {
+ /* .fa-heart.fa-2x.coeur-menu {
     color: none;
     margin-right: 25px;
 
-  }
+  }*/
 
-  .menu__header {
-    padding: 1rem 2rem 0 1rem;
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-
-  }
-
+ 
   .menuItem {
     background-color: #fff;
     padding: 1rem;
@@ -697,10 +524,7 @@ body {
     padding-bottom: 10px;
   }
 
-  .description-nom {
-    line-height: 0;
-  }
-
+ 
   .fa-utensils {
 
     margin-right: 10px;
@@ -736,13 +560,7 @@ body {
     filter: invert(100%);
   }
 
-  /* .liste-footer {
-    width: 150%;
-    padding-left: 0;
-    list-style-type: none;
-    font-family: 'Roboto';
-    color: white;
-  }*/
+  
 
 
   .footer-icon {
@@ -767,14 +585,8 @@ body {
     font-family: 'Roboto';
     color: white;
   }
-
-  li::before {
-
-    counter-increment: none;
-    content: none;
-  }
-
-  .footer-propos h3 {
+    .footer-propos h3 {
     margin-left: 38px;
   }
+
 }

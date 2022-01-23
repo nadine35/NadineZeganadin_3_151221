@@ -1,60 +1,56 @@
-.test {
-  color: red;
+#loader {
 
-  .test2 {
-    color: green;
-  }
-
-  &.test3 {
-    color: yellow;
-  }
-}
-.loader{
-  display: block;
-  position: relative;
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  border: 7px solid transparent;
-  border-top-color: crimson;
-  animation: spin 2s linear infinite;
- 
-  
-}
-
-.loader::before, .loader::after{
-
-  content: "";
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
-  border-radius: 50%;
-  border: 7px solid transparent;
- }
- .loader::before{
-   top: 10px;
-   left: 10px;
-   right: 10px;
-   bottom: 10px;
-   border-top-color: rgb(252, 45, 86);
-   animation: spin 3s linear infinite;
-   background: green;
- }
- .loader::after{
-
-  top: 25px;
-  left: 25px;
-  right: 25px;
-  bottom: 25px;
-  border-top-color: rgb(192, 108, 125);
-  animation: spin 3s linear infinite;
-  background: orange;
- }
- 
+  background-color: #000;
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+  animation: loader 5s linear;
+  visibility: hidden;
 
 
 
+  .loader-container { 
+      .loader {
+          display: block;
+          position: relative;
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
+          border: 5px solid transparent;
+          border-top-color: red;
+          animation: rotate 2s linear infinite;
 
-* {
-  box-sizing: border-box;
+          &::before,
+          &::after {
+              content: "";
+              position: absolute;
+              border-radius: 50%;
+              border: 5px solid transparent;
+          }
+
+          &::before {
+              top: 10px;
+              left: 10px;
+              right: 10px;
+              bottom: 10px;
+              border-top-color: orange;
+              animation: rotate 3s linear infinite;
+          }
+
+          &::after {
+              top: 25px;
+              left: 25px;
+              right: 25px;
+              bottom: 25px;
+              border-top-color: grey;
+              animation: rotate 1.5s linear infinite;
+          }
+      }
+  }
 }
 
 /* logo ohmyfood*/
@@ -87,6 +83,7 @@
 
   display: flex;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .menu {
@@ -226,6 +223,7 @@
   margin-bottom: 20px;
   background-color: white;
   border-radius: 10px;
+  width: 100%;
 }
 
 .flexCenter {
