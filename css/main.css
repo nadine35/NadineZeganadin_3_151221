@@ -450,7 +450,7 @@
 }
 
 .liste-footer {
-  list-style-type: none;
+  /* list-style-type: none;*/
   font-family: 'Roboto';
   color: white;
 }
@@ -499,6 +499,7 @@ input {
   border: none;
 }
 
+/*boutons fonctionnement*/
 .buttonSearchFonction {
   height: 80px;
   width: 300px;
@@ -521,23 +522,15 @@ input {
   background: linear-gradient(180deg, #F6F6F6 35%);
   -webkit-box-shadow: 2px 3px 8px #5f5858;
           box-shadow: 2px 3px 8px #5f5858;
-  counter-reset: section;
   list-style-type: none;
-}
-
-.buttonFonction__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  position: relative;
 }
 
 .iconFonction {
   margin-right: 20px;
 }
 
+/*bouton de recherche explorer nos restaurants*/
 .buttonSearch {
   height: 50px;
   width: 250px;
@@ -562,6 +555,7 @@ input {
           transition-duration: .25s;
 }
 
+/*animation bouton explorer nos restaurants*/
 .buttonSearch:hover {
   -webkit-transition: -webkit-transform 1000ms ease-in;
   transition: -webkit-transform 1000ms ease-in;
@@ -578,6 +572,7 @@ input {
   background-color: #FF79DA;
 }
 
+/* bouton de commande menus*/
 .buttonCommande {
   border-radius: 25px;
   text-transform: uppercase;
@@ -601,6 +596,7 @@ input {
   background: linear-gradient(180deg, rgba(255, 121, 218, 0.919503) 35%, #9356DC 100%);
 }
 
+/*animation confirmation menus*/
 @-webkit-keyframes itemAppear {
   0% {
     -webkit-transform: scaleX(0);
@@ -611,7 +607,6 @@ input {
             transform: scaleX(1);
   }
 }
-
 @keyframes itemAppear {
   0% {
     -webkit-transform: scaleX(0);
@@ -623,6 +618,7 @@ input {
   }
 }
 
+/*animation du loader*/
 @-webkit-keyframes loader {
   0% {
     visibility: visible;
@@ -633,7 +629,6 @@ input {
     visibility: hidden;
   }
 }
-
 @keyframes loader {
   0% {
     visibility: visible;
@@ -676,124 +671,90 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-.card {
-  text-decoration: none;
-  color: initial;
-  position: relative;
+/*icône Paris, Belleville*/
+.iconSize {
+  width: 50px;
+  height: 20px;
 }
 
-.card.card-item {
-  background-color: #99E2D0;
-  color: #1b6150;
-  padding: .5rem;
-  border-radius: .125rem;
-  position: absolute;
-  margin-top: 1rem;
-  right: .50rem;
-  margin-right: 180px;
+#titre-principal {
+  text-align: center;
+  font-size: x-large;
+  line-height: 1em;
 }
 
-.restaurants .images {
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px 10px 0 0;
-  height: 12rem;
-  width: 100%;
-  position: relative;
+#desc-titre {
+  text-align: center;
+  font-size: x-large;
+  line-height: 1em;
 }
 
-.card.card-item {
-  background-color: #99E2D0;
-  color: #1b6150;
-  padding: .5rem;
-  border-radius: .125rem;
-  position: absolute;
-  margin-top: 1rem;
-  right: .50rem;
-  margin-right: 20px;
+/*titre fonctionnement et restaurants*/
+.title-resto {
+  margin-left: 20px;
+  font-size: x-large;
 }
 
-/*Liste de choix resto menu dégustation*/
-.buttonFonction {
-  margin-right: 50px;
-  margin-left: 30px;
-}
-
-.buttonFonction::before {
-  counter-increment: compteListe;
-  content: counter(compteListe) " ";
-  background: #9356DC;
-  height: 1.5rem;
-  width: 1.5rem;
-  border-radius: 100px;
+/*partie fonctionnement */
+.fonctionnement {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #ffff;
-  position: absolute;
-  margin-left: -70px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
-.buttonFonction li::before {
-  counter-increment: none;
-  content: none;
-}
-
-.buttonFonction ol {
-  list-style-type: none;
-  counter-reset: compteListe;
-}
-
-.buttonFonction .reinit {
-  counter-reset: compteListe;
-}
-
-.buttonFonction li.buttonFonction {
-  margin-right: 50px;
-  margin-left: 30px;
-}
-
-.buttonFonction ol {
-  list-style-type: none;
-  counter-reset: compteListe;
-}
-
-.buttonFonction li::before {
-  counter-increment: compteListe;
-  content: counter(compteListe) " ";
-  background: #9356DC;
-  height: 1.5rem;
-  width: 1.5rem;
-  border-radius: 100px;
+/*classe restaurants comprenant les titres, images et descriptions*/
+.restaurants {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+}
+
+.resultats-restaurants {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+/*description restaurant et icône coeur*/
+.description-resto {
+  margin-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #ffff;
-  position: absolute;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.buttonFonction .reinit {
-  counter-reset: compteListe;
+/*titre du resto et ville*/
+.description-nom {
+  line-height: 0.5em;
 }
 
-.buttonFonction a {
-  color: black;
-  text-decoration: none;
+/*div contenant le a l'image, la description et l'icône*/
+.annonce {
+  margin: 20px;
+  background-color: white;
+  border-radius: 10px;
 }
 
-.buttonFonction .menu__header {
+.menu__title {
+  font-family: "Shrikhand", cursive;
+}
+
+/*menu titre resto + icône coeur*/
+.menu__header {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
@@ -806,53 +767,88 @@ body {
   padding: 1rem 2rem 0 1rem;
 }
 
-.buttonFonction .title-resto {
-  margin-left: 20px;
-  font-size: x-large;
+.menu__title {
+  font-family: "Shrikhand", cursive;
 }
 
-.buttonFonction a {
+.menuItem__header,
+.menuItem__title {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1280px;
+}
+
+.container__menu {
+  margin-top: -60px;
+}
+
+.restaurants .images {
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px 10px 0 0;
+  height: 12rem;
+  width: 100%;
+  position: relative;
+}
+
+/*contient image,a, description resto, position relative pour le positionnemnt de la carte-item nouveau*/
+.card {
+  text-decoration: none;
+  color: initial;
+  position: relative;
+}
+
+/* item nouveau*/
+.card.card-item {
+  background-color: #99E2D0;
+  color: #1b6150;
+  padding: .5rem;
+  border-radius: .125rem;
+  position: absolute;
+  margin-top: 1rem;
+  right: .50rem;
+  margin-right: 20px;
+}
+
+a {
   color: black;
   text-decoration: none;
 }
 
-.buttonFonction ul.liste-footer {
-  color: black;
+.menu__header {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1rem 2rem 0 1rem;
 }
 
-.buttonFonction .annonce {
-  margin: 20px;
-  background-color: white;
-  border-radius: 10px;
+ul.liste-footer {
+  color: black;
+  list-style: none;
+}
+
+/*nombre 1,2, 3 des boutons fonctionnemnt*/
+span.number {
+  margin-right: 10px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  color: #ffffff;
+  position: absolute;
+  left: -10px;
 }
 
 @media (min-width: 1200px) {
-  .fonctionnement {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  .menu__title {
-    font-family: "Shrikhand", cursive;
-  }
-  .menu__header {
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding: 1rem 2rem 0 1rem;
-  }
   a {
     color: black;
     text-decoration: none;
@@ -863,21 +859,6 @@ body {
     text-overflow: ellipsis;
     overflow: hidden;
   }
-  /*classe restaurants*/
-  .restaurants {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  /*galerie images restaurants */
-  /* .resultats-restaurants {
-
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    margin-bottom: 20px;
-    width: 100%;
-  }*/
   .annonce {
     margin: 20px;
     background-color: white;
@@ -916,14 +897,6 @@ body {
   }
   .menuItem__ok {
     width: 4em;
-  }
-  .resultats-restaurants {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin-bottom: 20px;
   }
   .menuItem__description {
     white-space: nowrap;
@@ -979,6 +952,22 @@ body {
             flex-grow: 1;
     width: -moz-available;
   }
+  /*sous-menus entrées, plats, desserts*/
+  .sousMenus__title {
+    text-transform: uppercase;
+  }
+  /* surlignemnt vert avec taille définie sous les sous-menus*/
+  .sousMenus__title::after {
+    content: "";
+    width: 3rem;
+    height: .25rem;
+    background-color: #99e2d0;
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 30px;
+    left: 1px;
+    text-transform: uppercase;
+  }
 }
 
 /*@media Queries*/
@@ -998,32 +987,6 @@ body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .menu__header {
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    padding: 1rem 2rem 0 1rem;
-  }
-  .menuItem__description {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
-  .menu__title {
-    font-family: "Shrikhand", cursive;
-  }
-  .menuItem__header,
-  .menuItem__title {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-  }
   .menuItem__description {
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -1031,9 +994,6 @@ body {
   }
   .sousMenus__title {
     text-transform: uppercase;
-  }
-  .description-nom {
-    line-height: 0.5em;
   }
   .sousMenus__title::after {
     content: "";
@@ -1045,11 +1005,6 @@ body {
     margin-top: 30px;
     left: 1px;
     text-transform: uppercase;
-  }
-  #titre-principal {
-    text-align: center;
-    font-size: x-large;
-    line-height: 1em;
   }
   .annonce {
     width: initial;
@@ -1072,26 +1027,16 @@ body {
         -ms-flex-align: baseline;
             align-items: baseline;
   }
-  #desc-titre {
-    text-align: center;
-    font-size: x-large;
-    line-height: 1em;
-  }
-  .px {
+  .prix {
     margin-left: 180px;
     margin-right: 10px;
     font-weight: bold;
   }
+  /*icône check menu*/
   .menuItem__icon {
-    /*coloris menu__ok*/
     color: #99e2d0;
   }
-  .container {
-    max-width: 1280px;
-  }
-  .container__menu {
-    margin-top: -60px;
-  }
+  /*section menuItem delay header, prix et confirmation*/
   .menuItem {
     background-color: #fff;
     padding: 1rem;
@@ -1130,7 +1075,7 @@ body {
   .menuItem__description {
     margin: 0;
   }
-  .menuItem__px {
+  .menuItem__prix {
     font-weight: bold;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1181,9 +1126,6 @@ body {
     display: -ms-flexbox;
     display: flex;
   }
-  .menuItem__wrapIcon--modifier {
-    background-color: brown;
-  }
   .menuItem:hover .menuItem__wrapIcon {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
@@ -1208,10 +1150,7 @@ body {
             box-shadow: 2px 3px 8px #5f5858;
     cursor: pointer;
   }
-  .iconSize {
-    width: 50px;
-    height: 20px;
-  }
+  /*contient la partie restaurant et s'adapte au responsive en colonne*/
   .restaurants {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1223,29 +1162,12 @@ body {
     background-color: #F6F6F6;
     padding-top: 30px;
   }
-  .menu-details {
-    margin-left: 10px;
-    line-height: 0;
-  }
+  /*images des resto pages*/
   .img {
     height: 350px;
     background-size: cover;
   }
-  .description-resto {
-    margin-left: 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-right: 30px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
+  /* icône footer*/
   .fa-utensils {
     margin-right: 10px;
   }
@@ -1283,6 +1205,7 @@ body {
     -webkit-filter: invert(100%);
             filter: invert(100%);
   }
+  /* propriétés icônes footer*/
   .footer-icon {
     width: 1.2rem;
     margin-right: .5rem;
