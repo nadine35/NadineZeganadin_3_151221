@@ -1,17 +1,13 @@
 
   .Coeur-icon {
-    color: none;
+   /* color: none;*/
     &:hover{
       color: $color-secondary;
-
-
       font-weight: bold;
     }
     &::before{
-
       transition: color 1s ease-out;
     }
-    
   }
 
   .delay-0 {

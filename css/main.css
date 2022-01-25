@@ -450,7 +450,6 @@
 }
 
 .liste-footer {
-  /* list-style-type: none;*/
   font-family: 'Roboto', sans-serif;
   color: white;
 }
@@ -465,7 +464,7 @@
 }
 
 .Coeur-icon {
-  color: none;
+  /* color: none;*/
 }
 
 .Coeur-icon:hover {
@@ -557,11 +556,9 @@ input {
           transition-duration: .25s;
   -webkit-box-shadow: #FF79DA;
           box-shadow: #FF79DA;
-  /*animation bouton explorer nos restaurants*/
 }
 
 .buttonSearch:hover {
-  /* background: #FF79DA;*/
   background: -webkit-gradient(linear, left top, left bottom, color-stop(35%, rgba(255, 121, 218, 0.919503)), color-stop(120%, #9356DC));
   background: linear-gradient(180deg, rgba(255, 121, 218, 0.919503) 35%, #9356DC 120%);
   -webkit-box-shadow: 2px 3px 5px #FF79DA;
