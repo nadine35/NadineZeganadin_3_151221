@@ -451,7 +451,7 @@
 
 .liste-footer {
   /* list-style-type: none;*/
-  font-family: 'Roboto';
+  font-family: 'Roboto', sans-serif;
   color: white;
 }
 
@@ -925,7 +925,7 @@ span.number {
     width: 150%;
     padding-left: 0;
     list-style-type: none;
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     color: white;
   }
 }
@@ -1221,7 +1221,7 @@ span.number {
     width: 150%;
     padding-left: 0;
     list-style-type: none;
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     color: white;
   }
   .footer-propos h3 {
