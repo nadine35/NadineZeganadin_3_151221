@@ -272,21 +272,6 @@
           transform: rotate(0);
 }
 
-/*.choix-resto {
-  height: 80px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
-  border-radius: 25px;
-  color: black;
-  border-radius: 1.25rem;
-  background-color: #F6F6F6;
-  background: linear-gradient(180deg, #F6F6F6 35%, );
-  box-shadow: 2px 3px 8px #5f5858;
-  cursor: pointer;
-
-}*/
 .flexCenter {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -545,8 +530,8 @@ input {
   cursor: pointer;
   -webkit-transition-duration: .25s;
           transition-duration: .25s;
-  -webkit-box-shadow: #FF79DA;
-          box-shadow: #FF79DA;
+  -webkit-box-shadow: 1px 1px 1px #FF79DA;
+          box-shadow: 1px 1px 1px #FF79DA;
 }
 
 .buttonSearch:hover {
