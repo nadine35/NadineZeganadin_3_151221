@@ -3,7 +3,6 @@
 
   height: 50px;
   width: 250px;
-  background-color: #FF79DA;
   background: linear-gradient(180deg, rgba(255, 121, 218, 0.919502835313813) 35%, #9356DC 100%);
   display: flex;
   align-items: center;
@@ -14,14 +13,14 @@
   color: white;
   cursor: pointer;
   transition-duration: .25s;
+  box-shadow: $color-secondary;
 
 
-}
-/*animation bouton explorer nos restaurants*/
-.buttonSearch:hover {
-  transition: transform 1000ms ease-in;
-  transition: transform 1000ms ease-out;
-  transition-timing-function: linear;
-  transform: scale(1.13);
-  background-color: #FF79DA;
+  /*animation bouton explorer nos restaurants*/
+  &:hover {
+    /* background: #FF79DA;*/
+    background: linear-gradient(180deg, rgba(255, 121, 218, 0.919502835313813) 35%, #9356DC 120%);
+    box-shadow: 2px 3px 5px $color-secondary;
+
+  }
 }
